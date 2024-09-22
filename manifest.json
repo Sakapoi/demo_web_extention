@@ -1,0 +1,27 @@
+{
+  "name" : "Tab Lister",
+  "version" : "1.0",
+  "manifest_version" : 3,
+  "description" : "List opened browser tabs in the current window",
+  "icons" :
+  {
+    "128" : "icon_128.png"
+  },
+  "permissions" : [ "tabs", "windows", "clipboardWrite" ],
+  "action" :
+  {
+    "default_icon" : "icon_128.png",
+    "default_popup" : "popup.html"
+  },
+  "content_security_policy" : {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;"
+  },
+  "web_accessible_resources" : [
+    {
+      "resources" : [ "styles.css" ],
+      "matches" : [ "<all_urls>" ]
+    }
+  ]
+}
+
+
